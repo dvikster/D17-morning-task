@@ -31,10 +31,10 @@ function trigPos(){
 
 //another way
 
-trigger={
+var trigger={
     'pos':0,
     'delta':0,
-    'sdvig': function() {
+    'switch': function() {
         trigger.pos ++;
         if (trigger.pos == 1) {
             trigger.delta += 50;
@@ -51,6 +51,7 @@ trigger={
         document.querySelector('.trig_block.second').style.marginLeft=trigger.delta+'px';
     }
 }
+//нужно указать через this.pos
 console.log(trigger.delta);
-document.querySelector('.trig_wrapp.second').onclick=trigger.sdvig;
+document.querySelector('.trig_wrapp.second').onclick=trigger.switch;
 
